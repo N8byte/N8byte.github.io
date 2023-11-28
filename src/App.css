@@ -1,12 +1,25 @@
-* {
+html {
+  background-color: rgb(39, 39, 39);
+}
+
+@font-face {
+  font-family: "nunito";
+  src: local("nunito"), url(./fonts/nunito.ttf) format("truetype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+div {
+  font-family: "nunito";
   align-self: center;
   align-items: center;
   text-align: center;
   color: aquamarine;
 }
 
-html {
-  background-color: rgb(39, 39, 39);
+.subtitle {
+  opacity: 0.5;
+  color: white;
 }
 
 .react-logo {
@@ -22,4 +35,10 @@ html {
   to {
     transform: rotate(360deg);
   }
+}
+
+.checklist {
+  margin: auto;
+  width: 15em;
+  text-align: left;
 }
