@@ -2,4 +2,24 @@
   align-self: center;
   align-items: center;
   text-align: center;
+  color: aquamarine;
+}
+
+html {
+  background-color: rgb(39, 39, 39);
+}
+
+.react-logo {
+  width: 2em;
+  margin: -0.3em;
+  animation: react-logo-spin infinite 10s linear;
+}
+
+@keyframes react-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
