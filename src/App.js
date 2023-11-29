@@ -4,15 +4,15 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1>Nate's Website</h1>
+      <h1>Nathan Waskiewicz</h1>
       <p>
         <i className="subtitle">Made in React </i>
         <img src={logo} className="react-logo" alt="React logo" />
       </p>
       <div className="checklist">
-        <ChecklistItem checked={true} text="The thing of the to be checked" />
-        <ChecklistItem checked={false} text="Create personal website" />
-        <ChecklistItem checked={false} text="Create Rust project" />
+        <ChecklistItem checked text="The thing of the to be checked" />
+        <ChecklistItem text="Create personal website" />
+        <ChecklistItem text="Create AWS/GCP project" />
       </div>
     </>
   );
@@ -23,11 +23,11 @@ function ChecklistItem(props) {
     <>
       <input
         type="checkbox"
-        checked={props.checked}
+        checked={props.checked ? true : false}
         readOnly
         onClick={() => {}}
       />
-      <label>{props.text}</label>
+      <label> {props.text}</label>
       <br />
     </>
   );

@@ -1,12 +1,17 @@
 html {
-  background-color: rgb(39, 39, 39);
+  background-image: linear-gradient(#111111, #224433, #00ffee);
+  height: 100vh;
 }
 
 @font-face {
   font-family: "nunito";
   src: local("nunito"), url(./fonts/nunito.ttf) format("truetype");
-  /* other formats include: 'woff2', 'truetype, 'opentype',
-                            'embedded-opentype', and 'svg' */
+}
+
+h1 {
+  color: transparent;
+  background: linear-gradient(#00ffee, #111111);
+  background-clip: text;
 }
 
 div {
@@ -14,7 +19,7 @@ div {
   align-self: center;
   align-items: center;
   text-align: center;
-  color: aquamarine;
+  color: white;
 }
 
 .subtitle {
@@ -39,6 +44,25 @@ div {
 
 .checklist {
   margin: auto;
-  width: 15em;
+  width: 16em;
   text-align: left;
+  border: 1px solid aquamarine;
+  border-radius: 5px;
+  padding: 1em;
+  background-color: #2228;
+  transition: all 2s;
+}
+
+.checklist:hover {
+  /* width: 20em; */
+  padding: 1em 3em;
+}
+
+.checklist > * {
+  transition: all 1s;
+}
+
+.checklist:hover > * {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
