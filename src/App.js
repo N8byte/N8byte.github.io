@@ -23,7 +23,14 @@ function App() {
 function Navbar() {
   return (
     <div className="navbar">
-      <svg src={logo} alt="My logo" />
+      <img
+        className="logo"
+        src={logo}
+        width={50}
+        height={50}
+        onClick={() => console.log("heya")}
+        alt="My logo"
+      />
     </div>
   );
 }

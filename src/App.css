@@ -1,7 +1,7 @@
 html {
   /* background-image: linear-gradient(#111111, #224433, #00ffee); */
-  background: rgb(0, 0, 0);
-  background: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(17, 213, 178, 1) 100%);
+  background: #121212;
+  /* background: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(17, 213, 178, 1) 100%); */
   height: 100vh;
 }
 
@@ -10,9 +10,20 @@ html {
   src: local("nunito"), url(./assets/fonts/nunito.ttf) format("truetype");
 }
 
+.navbar {
+  margin: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.logo {
+  cursor: pointer;
+}
+
 h1 {
-  color: transparent;
-  background: linear-gradient(#00ffee, #111111);
+  /* color: transparent; */
+  /* background: linear-gradient(#00ffee, #111111); */
+  color: #0fc;
   background-clip: text;
   font-size: 5rem;
 }
