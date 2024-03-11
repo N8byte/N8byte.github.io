@@ -1,1 +1,1 @@
-[https://n8byte.github.io]
+https://n8byte.github.io
