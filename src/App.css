@@ -10,6 +10,13 @@ html {
   src: local("nunito"), url(./assets/fonts/nunito.ttf) format("truetype");
 }
 
+:root {
+  --transparent-background: #2228;
+  --transparent-border: #2224;
+
+  --border-radius: 10px;
+}
+
 .navbar {
   /* margin: 20px; */
   display: flex;
@@ -27,6 +34,10 @@ html {
   width: 55px;
   height: 55px;
   filter: contrast(70%) brightness(120%);
+}
+
+.main-div {
+  padding: 0 10em;
 }
 
 h1 {
@@ -64,15 +75,44 @@ div {
   }
 }
 
+.panel {
+  width: fit-content;
+  margin: auto;
+  padding: 1em;
+  border-radius: var(--border-radius);
+  border: var(--transparent-border) solid 2px;
+  background-color: var(--transparent-background);
+}
+
+.panel > p {
+  height: fit-content;
+  margin: 0;
+}
+
+.panel {
+  width: fit-content;
+  margin: auto;
+  padding: 1em;
+  border-radius: var(--border-radius);
+  border: var(--transparent-border) solid 2px;
+  background-color: var(--transparent-background);
+}
+
+.panel > p {
+  height: fit-content;
+  margin: 0;
+}
+
 .checklist {
   margin: 3.5em auto;
   padding: 1em;
   width: 16em;
   text-align: left;
-  border: 1px solid aquamarine;
-  border-radius: 5px;
-  background-color: #2228;
-  transition: all 1s linear;
+  border: 2px solid aquamarine;
+  border-radius: var(--border-radius);
+  padding: 1em;
+  background-color: var(--transparent-background);
+  transition: all 1.5s;
 }
 
 .checklist:hover {
@@ -90,8 +130,18 @@ div {
   margin-bottom: 1em;
 }
 
-.catalog {
+.projects {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin: 50px 10%;
+}
+
+.project {
+  border-radius: var(--border-radius);
+  border: var(--transparent-border) solid 2px;
+  background-color: var(--transparent-background);
+}
+
+.card {
+  padding: 1em;
 }
