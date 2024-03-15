@@ -11,13 +11,22 @@ html {
 }
 
 .navbar {
-  margin: 20px;
+  /* margin: 20px; */
   display: flex;
   align-items: flex-start;
 }
 
 .logo {
+  margin: 20px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
+}
+.logo:hover {
+  margin: 17.5px;
+  width: 55px;
+  height: 55px;
+  filter: contrast(70%) brightness(120%);
 }
 
 h1 {
@@ -46,7 +55,6 @@ div {
   margin: -0.3em;
   animation: react-logo-spin infinite 10s linear;
 }
-
 @keyframes react-logo-spin {
   from {
     transform: rotate(0deg);
@@ -57,26 +65,33 @@ div {
 }
 
 .checklist {
-  margin: auto;
+  margin: 3.5em auto;
+  padding: 1em;
   width: 16em;
   text-align: left;
   border: 1px solid aquamarine;
   border-radius: 5px;
-  padding: 1em;
   background-color: #2228;
-  transition: all 1.5s;
+  transition: all 1s linear;
 }
 
 .checklist:hover {
   /* width: 20em; */
+  margin: 0 auto;
   padding: 1em 3em;
 }
 
 .checklist > * {
-  transition: all 1s;
+  transition: all 1s linear;
 }
 
 .checklist:hover > * {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.catalog {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 10%;
 }

@@ -1,5 +1,6 @@
 import reactLogo from "./assets/images/react.svg";
 import logo from "./assets/images/logo.svg";
+import gcp from "./assets/images/gcp.png";
 import "./App.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <ChecklistItem text="Create personal website" />
         <ChecklistItem text="Create AWS/GCP project" />
       </div>
+      <Catalog />
     </>
   );
 }
@@ -26,8 +28,6 @@ function Navbar() {
       <img
         className="logo"
         src={logo}
-        width={50}
-        height={50}
         onClick={() => console.log("heya")}
         alt="My logo"
       />
@@ -47,6 +47,17 @@ function ChecklistItem(props) {
       <label> {props.text}</label>
       <br />
     </>
+  );
+}
+
+function Catalog(props) {
+  return (
+    <div className="catalog">
+      <img src={gcp} alt="GCP logo"></img>
+      <img src={gcp} alt="GCP logo"></img>
+      <img src={gcp} alt="GCP logo"></img>
+      <img src={gcp} alt="GCP logo"></img>
+    </div>
   );
 }
 
