@@ -24,31 +24,36 @@ function App() {
         <br />
         <h2>TODO</h2>
         <div className="checklist">
-          <ChecklistItem checked text="The thing of the to be checked" />
-          <ChecklistItem text="Create personal website" />
-          <ChecklistItem text="Create AWS/GCP project" />
+          <ChecklistItem checked text="Personal website" />
+          <ChecklistItem text="AWS/GCP project" />
+          <ChecklistItem text="Finish developing a game" />
         </div>
         <br />
         <h2>Projects</h2>
         <div className="projects">
           <div className="project">
             <div className="card">Project A</div>
+            <img className="card-image" src={gcp} alt="GCP logo"></img>
           </div>
           <div className="project">
             <div className="card">Project B</div>
+            <img className="card-image" src={gcp} alt="GCP logo"></img>
           </div>
           <div className="project">
             <div className="card">Project C</div>
+            <img className="card-image" src={gcp} alt="GCP logo"></img>
           </div>
           <div className="project">
             <div className="card">Project D</div>
+            <img className="card-image" src={gcp} alt="GCP logo"></img>
           </div>
           <div className="project">
             <div className="card">Project E</div>
+            <img className="card-image" src={gcp} alt="GCP logo"></img>
           </div>
         </div>
       </div>
-      <Catalog />
+      <br />
     </>
   );
 }
@@ -78,17 +83,6 @@ function ChecklistItem(props) {
       <label> {props.text}</label>
       <br />
     </>
-  );
-}
-
-function Catalog(props) {
-  return (
-    <div className="catalog">
-      <img src={gcp} alt="GCP logo"></img>
-      <img src={gcp} alt="GCP logo"></img>
-      <img src={gcp} alt="GCP logo"></img>
-      <img src={gcp} alt="GCP logo"></img>
-    </div>
   );
 }
 

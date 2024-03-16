@@ -1,6 +1,6 @@
 html {
   /* background-image: linear-gradient(#111111, #224433, #00ffee); */
-  background: #121212;
+  background: var(--background-color);
   /* background: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(17, 213, 178, 1) 100%); */
   height: 100vh;
 }
@@ -11,9 +11,12 @@ html {
 }
 
 :root {
+  --prismarine: #0fd;
+  --dark-prismarine: #0a9;
+  --background-color: #171717;
   --transparent-background: #2228;
   --transparent-border: #2224;
-
+  --border-color: var(--dark-prismarine);
   --border-radius: 10px;
 }
 
@@ -43,9 +46,13 @@ html {
 h1 {
   /* color: transparent; */
   /* background: linear-gradient(#00ffee, #111111); */
-  color: #0fc;
+  color: var(--background-color);
+  text-shadow: 0 0 5px var(--prismarine);
   background-clip: text;
   font-size: 5rem;
+}
+h1::first-letter {
+  color: var(--prismarine);
 }
 
 div {
@@ -80,51 +87,32 @@ div {
   margin: auto;
   padding: 1em;
   border-radius: var(--border-radius);
-  border: var(--transparent-border) solid 2px;
+  border: var(--border-color) solid 2px;
   background-color: var(--transparent-background);
 }
-
-.panel > p {
-  height: fit-content;
-  margin: 0;
-}
-
-.panel {
-  width: fit-content;
-  margin: auto;
-  padding: 1em;
-  border-radius: var(--border-radius);
-  border: var(--transparent-border) solid 2px;
-  background-color: var(--transparent-background);
-}
-
 .panel > p {
   height: fit-content;
   margin: 0;
 }
 
 .checklist {
-  margin: 3.5em auto;
+  margin: 0 auto;
   padding: 1em;
   width: 16em;
   text-align: left;
-  border: 2px solid aquamarine;
+  border: 2px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 1em;
   background-color: var(--transparent-background);
   transition: all 1.5s;
 }
-
 .checklist:hover {
-  /* width: 20em; */
-  margin: 0 auto;
   padding: 1em 3em;
 }
 
 .checklist > * {
   transition: all 1s linear;
 }
-
 .checklist:hover > * {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -134,6 +122,7 @@ div {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .project {
@@ -144,4 +133,8 @@ div {
 
 .card {
   padding: 1em;
+}
+
+.card-image {
+  width: auto;
 }
