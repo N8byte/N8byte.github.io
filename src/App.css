@@ -1,7 +1,5 @@
 html {
-  /* background-image: linear-gradient(#111111, #224433, #00ffee); */
   background: var(--background-color);
-  /* background: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(17, 213, 178, 1) 100%); */
   height: 100vh;
 }
 
@@ -14,14 +12,15 @@ html {
   --prismarine: #0fd;
   --dark-prismarine: #0a9;
   --background-color: #171717;
-  --transparent-background: #2228;
-  --transparent-border: #2224;
+  --transparent-background: #3338;
+  --transparent-border: #5554;
+  --hover-border: #8888;
+  --click-border: #aaaa;
   --border-color: var(--dark-prismarine);
   --border-radius: 10px;
 }
 
 .navbar {
-  /* margin: 20px; */
   display: flex;
   align-items: flex-start;
 }
@@ -40,12 +39,10 @@ html {
 }
 
 .main-div {
-  padding: 0 10em;
+  padding: 0 10rem;
 }
 
 h1 {
-  /* color: transparent; */
-  /* background: linear-gradient(#00ffee, #111111); */
   color: var(--background-color);
   text-shadow: 0 0 5px var(--prismarine);
   background-clip: text;
@@ -119,22 +116,52 @@ div {
 }
 
 .projects {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 22% 22% 22% 22%;
+  row-gap: 2rem;
+  width: 100%;
   justify-content: space-between;
-  gap: 20px;
 }
 
 .project {
+  display: flex;
+  flex: 0 0 15em;
+  overflow: hidden;
+  flex-direction: column;
+  height: 15rem;
   border-radius: var(--border-radius);
   border: var(--transparent-border) solid 2px;
   background-color: var(--transparent-background);
+  transition: 200ms all;
 }
 
-.card {
+.project:hover {
+  border-color: var(--dark-prismarine);
+  cursor: pointer;
+}
+
+.project:active {
+  border-color: var(--click-border);
+}
+
+.card-title {
   padding: 1em;
 }
 
 .card-image {
-  width: auto;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.card-description {
+  background: linear-gradient(
+    to bottom,
+    white 0px,
+    white calc(0% + 1em),
+    transparent calc(0% + 4em),
+    transparent 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
