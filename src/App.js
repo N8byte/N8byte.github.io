@@ -9,11 +9,7 @@ function App() {
     <>
       <Navbar />
       <div className="main-div">
-        <p>
-          <i className="subtitle">Made in React </i>
-          <img src={reactLogo} className="react-logo" alt="React logo" />
-        </p>
-        <h1>Nathan Waskiewicz</h1>
+        <BlinkingHeader text="Nate Waskiewicz" />
         <div className="panel">
           <p>
             Hi! I'm Nate, I'm a software engineer & designer, and I love what I
@@ -48,8 +44,28 @@ function App() {
         </div>
       </div>
       <br />
+      <p>
+        <i className="subtitle">Made in React </i>
+        <img src={reactLogo} className="react-logo" alt="React logo" />
+      </p>
     </>
   );
+}
+
+function BlinkingHeader(props) {
+  let output = [];
+
+  for (let i = 0; i < props.text.length; i++) {
+    output.push(
+      <span
+        style={{ animationDelay: Math.random() * -300 + "s" }}
+        className="blinking-title"
+      >
+        {props.text.charAt(i)}
+      </span>
+    );
+  }
+  return <h1>{output}</h1>;
 }
 
 function Navbar() {
